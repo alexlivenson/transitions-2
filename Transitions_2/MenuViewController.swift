@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  MenuViewController.swift
 //  Transitions_2
 //
 //  Created by alex livenson on 11/3/14.
@@ -8,9 +8,7 @@
 
 import UIKit
 
-class MainViewController: UITableViewController {
-    
-    let transitionManager = TransitionManager()
+class MenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,21 +21,15 @@ class MainViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func unwindToMainView(segue: UIStoryboardSegue) {
-        // xcode bug does not unwind after messing around with transperency
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let toVC = segue.destinationViewController as UIViewController
-        toVC.transitioningDelegate = self.transitionManager
     }
-    
+    */
 
 }

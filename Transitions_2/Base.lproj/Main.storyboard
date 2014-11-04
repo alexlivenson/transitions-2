@@ -16,7 +16,7 @@
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3BD-Pl-72n">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" patternImage="3563D38C-FBA5-486A-BA3C-2B5EDAA1CAAA" colorSpace="pattern"/>
+                        <color key="barTintColor" patternImage="07ED3EF7-DC72-4B34-A281-BDCFC49FB189" colorSpace="pattern"/>
                     </toolbar>
                     <connections>
                         <segue destination="HHc-gX-f1i" kind="relationship" relationship="rootViewController" id="rH9-OO-E1g"/>
@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="150" y="402"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="64M-dT-0wE">
             <objects>
-                <tableViewController id="HHc-gX-f1i" sceneMemberID="viewController">
+                <tableViewController id="HHc-gX-f1i" customClass="MainViewController" customModule="Transitions_2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hBg-Li-SPq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,7 +83,7 @@
                         <barButtonItem title="+" width="72" id="g7q-R1-EU8">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="IPq-M2-mGb" kind="custom" id="fsg-Hn-t4V"/>
+                                <segue destination="IPq-M2-mGb" kind="presentation" modalPresentationStyle="overFullScreen" id="nt5-U1-X7c"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="9GQ-De-4Jo">
@@ -97,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="907.5" y="450.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="n4M-lG-qfh">
             <objects>
-                <viewController id="IPq-M2-mGb" sceneMemberID="viewController">
+                <viewController id="IPq-M2-mGb" customClass="MenuViewController" customModule="Transitions_2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xhY-Mt-L4C"/>
                         <viewControllerLayoutGuide type="bottom" id="528-d3-rCb"/>
@@ -108,17 +108,48 @@
                     <view key="view" contentMode="scaleToFill" id="lOm-AS-Gtc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Audio" translatesAutoresizingMaskIntoConstraints="NO" id="SuU-Fy-fjH">
+                                <rect key="frame" x="55" y="104" width="101" height="101"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Chat" translatesAutoresizingMaskIntoConstraints="NO" id="Tyk-Ak-jD0">
+                                <rect key="frame" x="228" y="104" width="101" height="101"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="i7T-cz-Lg7">
+                                <rect key="frame" x="228" y="266" width="101" height="101"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Text" translatesAutoresizingMaskIntoConstraints="NO" id="eZH-lO-11u">
+                                <rect key="frame" x="228" y="439" width="101" height="101"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Quote" translatesAutoresizingMaskIntoConstraints="NO" id="Q12-6l-lJ7">
+                                <rect key="frame" x="55" y="439" width="101" height="101"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Link" translatesAutoresizingMaskIntoConstraints="NO" id="C7N-Q2-0Kd">
+                                <rect key="frame" x="55" y="266" width="101" height="101"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNs-Z2-DXd">
+                                <rect key="frame" x="139" y="605" width="96" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="o8q-MC-3C9" kind="unwind" unwindAction="unwindToMainView:" id="EyO-uj-iUs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="0.75" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B20-pT-oBQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="o8q-MC-3C9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1561.5" y="450.5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="3563D38C-FBA5-486A-BA3C-2B5EDAA1CAAA" width="512" height="512">
+        <image name="07ED3EF7-DC72-4B34-A281-BDCFC49FB189" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGTk9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QEQcI
 ExQZHh8nKzIzNDw/QkhLVSRudWxs1QkKCwwNDg8QERJWTlNTaXplViRjbGFzc1xOU0ltYWdlRmxhZ3NW
@@ -17673,6 +17704,12 @@ D68AEA+3ABAPugAQD78AEA/HABAPygAQD9wAEA/fABAP5AAAAAAAAAQBAAAAAAAAAFIAAAAAAAAAAAAA
 AAAAEA/mA
 </mutableData>
         </image>
+        <image name="Audio" width="100" height="100"/>
+        <image name="Chat" width="100" height="100"/>
+        <image name="Link" width="100" height="100"/>
+        <image name="Photo" width="100" height="100"/>
+        <image name="Quote" width="100" height="100"/>
+        <image name="Text" width="100" height="100"/>
         <image name="fish icon" width="984" height="653"/>
     </resources>
 </document>
