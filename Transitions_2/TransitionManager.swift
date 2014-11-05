@@ -41,7 +41,7 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
                 menuView.alpha = self.presenting ? 1 : 0
             }, completion: { (finished:Bool) in
                 transitionContext.completeTransition(true)
-                // Fix weird bug
+                // Fix weird bug that drops the view
                 UIApplication.sharedApplication().keyWindow?.addSubview(screens.to.view)
         })
         

@@ -11,6 +11,7 @@ import UIKit
 class MainViewController: UITableViewController {
     
     let transitionManager = TransitionManager()
+    let transitionManager2 = TransitionManager_2()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,7 @@ class MainViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         let toVC = segue.destinationViewController as UIViewController
-        toVC.transitioningDelegate = self.transitionManager
+        toVC.transitioningDelegate = self.transitionManager2
     }
     
 

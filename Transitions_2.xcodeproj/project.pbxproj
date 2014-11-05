@@ -16,6 +16,7 @@
 		CE84A04C1A087B9E00292D0D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE84A04B1A087B9E00292D0D /* Images.xcassets */; };
 		CE84A04F1A087B9E00292D0D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE84A04D1A087B9E00292D0D /* LaunchScreen.xib */; };
 		CE84A05B1A087B9E00292D0D /* Transitions_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84A05A1A087B9E00292D0D /* Transitions_2Tests.swift */; };
+		CEAE365C1A096B3F003593F3 /* TransitionManager_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE365B1A096B3F003593F3 /* TransitionManager_2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		CE84A0541A087B9E00292D0D /* Transitions_2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Transitions_2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE84A0591A087B9E00292D0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE84A05A1A087B9E00292D0D /* Transitions_2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitions_2Tests.swift; sourceTree = "<group>"; };
+		CEAE365B1A096B3F003593F3 /* TransitionManager_2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager_2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				CE84A0421A087B9E00292D0D /* Supporting Files */,
 				CE24495E1A087DCE001C7B11 /* MainViewController.swift */,
 				CE2449621A0890D5001C7B11 /* TransitionManager.swift */,
+				CEAE365B1A096B3F003593F3 /* TransitionManager_2.swift */,
 				CE2449601A08879E001C7B11 /* MenuViewController.swift */,
 			);
 			path = Transitions_2;
@@ -224,6 +227,7 @@
 				CE24495F1A087DCE001C7B11 /* MainViewController.swift in Sources */,
 				CE84A0471A087B9E00292D0D /* ViewController.swift in Sources */,
 				CE2449631A0890D5001C7B11 /* TransitionManager.swift in Sources */,
+				CEAE365C1A096B3F003593F3 /* TransitionManager_2.swift in Sources */,
 				CE84A0451A087B9E00292D0D /* AppDelegate.swift in Sources */,
 				CE2449611A08879E001C7B11 /* MenuViewController.swift in Sources */,
 			);

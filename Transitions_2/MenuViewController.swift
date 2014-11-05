@@ -9,7 +9,15 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-
+    @IBOutlet weak var imgAudio: UIImageView!
+    @IBOutlet weak var imgChat: UIImageView!
+    
+    @IBOutlet weak var imgLink: UIImageView!
+    @IBOutlet weak var imgCamera: UIImageView!
+    
+    @IBOutlet weak var imgQuote: UIImageView!
+    @IBOutlet weak var imgText: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

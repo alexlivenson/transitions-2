@@ -16,7 +16,7 @@
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3BD-Pl-72n">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" patternImage="07ED3EF7-DC72-4B34-A281-BDCFC49FB189" colorSpace="pattern"/>
+                        <color key="barTintColor" patternImage="D178A3CB-9BFE-469F-9569-BCEDBA7A2812" colorSpace="pattern"/>
                     </toolbar>
                     <connections>
                         <segue destination="HHc-gX-f1i" kind="relationship" relationship="rootViewController" id="rH9-OO-E1g"/>
@@ -118,9 +118,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="i7T-cz-Lg7">
                                 <rect key="frame" x="228" y="266" width="101" height="101"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Text" translatesAutoresizingMaskIntoConstraints="NO" id="eZH-lO-11u">
-                                <rect key="frame" x="228" y="439" width="101" height="101"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Quote" translatesAutoresizingMaskIntoConstraints="NO" id="Q12-6l-lJ7">
                                 <rect key="frame" x="55" y="439" width="101" height="101"/>
                             </imageView>
@@ -137,10 +134,21 @@
                                     <segue destination="o8q-MC-3C9" kind="unwind" unwindAction="unwindToMainView:" id="EyO-uj-iUs"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Text" translatesAutoresizingMaskIntoConstraints="NO" id="eZH-lO-11u">
+                                <rect key="frame" x="228" y="437" width="101" height="101"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="0.75" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imgAudio" destination="SuU-Fy-fjH" id="XLF-Zl-gqo"/>
+                        <outlet property="imgCamera" destination="i7T-cz-Lg7" id="OK6-8g-CQl"/>
+                        <outlet property="imgChat" destination="Tyk-Ak-jD0" id="3kI-qV-pfh"/>
+                        <outlet property="imgLink" destination="C7N-Q2-0Kd" id="oaD-S4-XIe"/>
+                        <outlet property="imgQuote" destination="Q12-6l-lJ7" id="i3z-hB-lbQ"/>
+                        <outlet property="imgText" destination="eZH-lO-11u" id="ws7-1S-vZ5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B20-pT-oBQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="o8q-MC-3C9" userLabel="Exit" sceneMemberID="exit"/>
@@ -149,7 +157,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="07ED3EF7-DC72-4B34-A281-BDCFC49FB189" width="512" height="512">
+        <image name="Audio" width="100" height="100"/>
+        <image name="Chat" width="100" height="100"/>
+        <image name="D178A3CB-9BFE-469F-9569-BCEDBA7A2812" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGTk9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QEQcI
 ExQZHh8nKzIzNDw/QkhLVSRudWxs1QkKCwwNDg8QERJWTlNTaXplViRjbGFzc1xOU0ltYWdlRmxhZ3NW
@@ -17690,22 +17700,20 @@ tc42zrbPN8+40DnQutE80b7SP9LB00TTxtRJ1MvVTtXR1lXW2Ndc1+DYZNjo2WzZ8dp22vvbgNwF3Ird
 EN2W3hzeot8p36/gNuC94UThzOJT4tvjY+Pr5HPk/OWE5g3mlucf56noMui86Ubp0Opb6uXrcOv77Ibt
 Ee2c7ijutO9A78zwWPDl8XLx//KM8xnzp/Q09ML1UPXe9m32+/eK+Bn4qPk4+cf6V/rn+3f8B/yY/Sn9
 uv5L/tz/bf//gAjSLC0uL1okY2xhc3NuYW1lWCRjbGFzc2VzXU5TTXV0YWJsZURhdGGjLjAxVk5TRGF0
-YVhOU09iamVjdF8QGnt7MCwgMH0sIHs1MjQyODgsIDUyNDI4OH19XxAae3swLCAwfSwgezUyNDI4OCwg
-NTI0Mjg4fX3TLC01Njc6WyRjbGFzc2hpbnRzXxAUTlNDR0ltYWdlU25hcHNob3RSZXCjODkxXxAUTlND
-R0ltYWdlU25hcHNob3RSZXBaTlNJbWFnZVJlcKE7XxAQTlNDYWNoZWRJbWFnZVJlcNIsLT0+V05TQXJy
-YXmiPTHSLC1AQV5OU011dGFibGVBcnJheaNAPTHTQ0QKRUZHV05TV2hpdGVcTlNDb2xvclNwYWNlRDAg
-MAAQA4AP0iwtSUpXTlNDb2xvcqJJMdIsLUxNV05TSW1hZ2WiTDFfEA9OU0tleWVkQXJjaGl2ZXLRUFFU
-cm9vdIABAAAACAAAABEAAAAaAAAAIwAAAC0AAAAyAAAANwAAAEsAAABRAAAAXAAAAGMAAABqAAAAdwAA
-AH4AAACGAAAAiAAAAIoAAACPAAAAkQAAAJMAAACeAAAAowAAAK4AAACwAAAAsgAAALQAAAC5AAAAvAAA
-AL4AAADAAAAAwgAAAMQAAADNAAAA5wAAAP4AAAEYAAABGgAAARwAAAEeAAABIAAAASUAAAEtABAOgQAQ
-DoMAEA6IABAOkwAQDpwAEA6qABAOrgAQDrUAEA6+ABAO2wAQDvgAEA7/ABAPCwAQDyIAEA8mABAPPQAQ
-D0gAEA9KABAPXQAQD2IAEA9qABAPbQAQD3IAEA+BABAPhQAQD4wAEA+UABAPoQAQD6YAEA+oABAPqgAQ
-D68AEA+3ABAPugAQD78AEA/HABAPygAQD9wAEA/fABAP5AAAAAAAAAQBAAAAAAAAAFIAAAAAAAAAAAAA
-AAAAEA/mA
+YVhOU09iamVjdF8QHHt7MCwgMH0sIHsxMDQ4NTc2LCAxMDQ4NTc2fX1fEBx7ezAsIDB9LCB7MTA0ODU3
+NiwgMTA0ODU3Nn190ywtNTY3OlskY2xhc3NoaW50c18QFE5TQ0dJbWFnZVNuYXBzaG90UmVwozg5MV8Q
+FE5TQ0dJbWFnZVNuYXBzaG90UmVwWk5TSW1hZ2VSZXChO18QEE5TQ2FjaGVkSW1hZ2VSZXDSLC09PldO
+U0FycmF5oj0x0iwtQEFeTlNNdXRhYmxlQXJyYXmjQD0x00NECkVGR1dOU1doaXRlXE5TQ29sb3JTcGFj
+ZUQwIDAAEAOAD9IsLUlKV05TQ29sb3KiSTHSLC1MTVdOU0ltYWdlokwxXxAPTlNLZXllZEFyY2hpdmVy
+0VBRVHJvb3SAAQAAAAgAAAARAAAAGgAAACMAAAAtAAAAMgAAADcAAABLAAAAUQAAAFwAAABjAAAAagAA
+AHcAAAB+AAAAhgAAAIgAAACKAAAAjwAAAJEAAACTAAAAngAAAKMAAACuAAAAsAAAALIAAAC0AAAAuQAA
+ALwAAAC+AAAAwAAAAMIAAADEAAAAzQAAAOcAAAD+AAABGAAAARoAAAEcAAABHgAAASAAAAElAAABLQAQ
+DoEAEA6DABAOiAAQDpMAEA6cABAOqgAQDq4AEA61ABAOvgAQDt0AEA78ABAPAwAQDw8AEA8mABAPKgAQ
+D0EAEA9MABAPTgAQD2EAEA9mABAPbgAQD3EAEA92ABAPhQAQD4kAEA+QABAPmAAQD6UAEA+qABAPrAAQ
+D64AEA+zABAPuwAQD74AEA/DABAPywAQD84AEA/gABAP4wAQD+gAAAAAAAAEAQAAAAAAAABSAAAAAAAA
+AAAAAAAAABAP6g
 </mutableData>
         </image>
-        <image name="Audio" width="100" height="100"/>
-        <image name="Chat" width="100" height="100"/>
         <image name="Link" width="100" height="100"/>
         <image name="Photo" width="100" height="100"/>
         <image name="Quote" width="100" height="100"/>
