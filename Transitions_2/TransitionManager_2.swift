@@ -55,17 +55,25 @@ class TransitionManager_2: NSObject, UIViewControllerAnimatedTransitioning, UIVi
         
     }
     
+    func offStage(amount: CGFloat) -> CGAffineTransform {
+        return CGAffineTransformMakeTranslation(amount, 0)
+    }
+    
     func offStageMenuViewController(menuVC: MenuViewController) {
-        // setup 2D transition for animation
-        let offStageLeft = CGAffineTransformMakeTranslation(-150, 0)
-        let offStageRight = CGAffineTransformMakeTranslation(150, 0)
-        
         menuVC.view.alpha = 0
+        let offSetTop:CGFloat = 300
+        let offSetMiddle:CGFloat = 150
+        let offSetBottom:CGFloat = 50
         
         // prepare menu items to slide in (Also this is why need the view controller)
-        menuVC.imgAudio.transform = offStageLeft
-        menuVC.imgChat.transform = offStageRight
+        menuVC.imgAudio.transform = offStage(-offSetTop)
+        menuVC.imgChat.transform = offStage(offSetTop)
         
+        menuVC.imgLink.transform = offStage(-offSetMiddle)
+        menuVC.imgCamera.transform = offStage(offSetMiddle)
+
+        menuVC.imgQuote.transform = offStage(-offSetBottom)
+        menuVC.imgText.transform = offStage(offSetBottom)
     }
     
     func onStageMenuViewController(menuVC: MenuViewController) {
@@ -75,6 +83,13 @@ class TransitionManager_2: NSObject, UIViewControllerAnimatedTransitioning, UIVi
         // items slide out
         menuVC.imgAudio.transform = CGAffineTransformIdentity
         menuVC.imgChat.transform = CGAffineTransformIdentity
+        
+        menuVC.imgLink.transform = CGAffineTransformIdentity
+        menuVC.imgCamera.transform = CGAffineTransformIdentity
+        
+        menuVC.imgQuote.transform = CGAffineTransformIdentity
+        menuVC.imgText.transform = CGAffineTransformIdentity
+
     }
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
