@@ -12,11 +12,13 @@ class MainViewController: UITableViewController {
     
     let transitionManager = TransitionManager()
     let transitionManager2 = TransitionManager_2()
+    let transitionManager3 = TransitionManager_3()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.transitionManager3.sourceVC = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,8 +38,8 @@ class MainViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let toVC = segue.destinationViewController as UIViewController
-        toVC.transitioningDelegate = self.transitionManager2
+        let toVC = segue.destinationViewController as MenuViewController
+        toVC.transitioningDelegate = self.transitionManager3
     }
     
 
