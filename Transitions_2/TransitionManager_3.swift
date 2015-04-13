@@ -56,7 +56,11 @@ UIViewControllerTransitioningDelegate, UIViewControllerInteractiveTransitioning 
         default: // .Ended, .Cancelled, .Failed ...
             // return flag to false and finished the transition
             self.interactive = false
-            self.finishInteractiveTransition()
+            if d > 0.2 {
+                self.finishInteractiveTransition()
+            } else {
+                self.cancelInteractiveTransition()
+            }
         }
         
     }
@@ -70,7 +74,7 @@ UIViewControllerTransitioningDelegate, UIViewControllerInteractiveTransitioning 
         
         // calcuate which vc is in front
         let mainVC = !self.isPresenting ? screens.to as UIViewController : screens.from as UIViewController
-        let menuVC = !self.isPresenting ? screens.from as MenuViewController : screens.to as MenuViewController
+        let menuVC = !self.isPresenting ? screens.from as! MenuViewController : screens.to as! MenuViewController
         
         // Prepare the menuVC to be presented
         if self.isPresenting {
@@ -93,8 +97,14 @@ UIViewControllerTransitioningDelegate, UIViewControllerInteractiveTransitioning 
                 }
                 
             }, completion: { (finished:Bool) in
-                transitionContext.completeTransition(true)
-                UIApplication.sharedApplication().keyWindow?.addSubview(screens.to.view)
+                if transitionContext.transitionWasCancelled() {
+                    transitionContext.completeTransition(false)
+                    UIApplication.sharedApplication().keyWindow?.addSubview(screens.from.view)
+                } else {
+                    transitionContext.completeTransition(true)
+                    UIApplication.sharedApplication().keyWindow?.addSubview(screens.to.view)
+                }
+                
         })
         
     }

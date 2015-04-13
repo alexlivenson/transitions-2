@@ -38,7 +38,7 @@ class MainViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let toVC = segue.destinationViewController as MenuViewController
+        let toVC = segue.destinationViewController as! MenuViewController
         toVC.transitioningDelegate = self.transitionManager3
     }
     

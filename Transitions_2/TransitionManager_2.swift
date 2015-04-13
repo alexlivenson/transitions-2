@@ -21,7 +21,7 @@ class TransitionManager_2: NSObject, UIViewControllerAnimatedTransitioning, UIVi
         
         // calculate who is in front
         let mainVC = !self.isPresenting ? screens.to as UIViewController : screens.from as UIViewController
-        let menuVC = !self.isPresenting ? screens.from as MenuViewController : screens.to as MenuViewController
+        let menuVC = !self.isPresenting ? screens.from as! MenuViewController : screens.to as! MenuViewController
         
         // Need to add this to container to faciliate animation
         let menuView = menuVC.view

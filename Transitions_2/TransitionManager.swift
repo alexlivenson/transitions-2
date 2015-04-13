@@ -21,7 +21,7 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
         
         // assign reference for menu and main vc
         let bottomVC = !self.presenting ? screens.to as UIViewController : screens.from as UIViewController
-        let menuVC = !self.presenting ? screens.from as MenuViewController : screens.to as MenuViewController
+        let menuVC = !self.presenting ? screens.from as! MenuViewController : screens.to as! MenuViewController
         
         let bottomView = bottomVC.view
         let menuView = menuVC.view
